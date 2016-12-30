@@ -1,0 +1,9 @@
+{
+  "name": "backdown",
+  "version": "0.0.1",
+  "description": "Backup globally installed npm packages",
+  "main": "index.js",
+  "repository": "https://github.com/adamsiwiec/backdown",
+  "author": "Adam Siwiec",
+  "license": "MIT"
+}
