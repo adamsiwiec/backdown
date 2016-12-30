@@ -1,9 +1,18 @@
 {
   "name": "backdown",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "preferGlobal": true,
+  "bin": {
+    "backdown": "index.js"
+  },
+  "install": "node init.js",
   "description": "Backup globally installed npm packages",
   "main": "index.js",
   "repository": "https://github.com/adamsiwiec/backdown",
   "author": "Adam Siwiec",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "node-cmd": "^1.2.0"
+  }
 }
