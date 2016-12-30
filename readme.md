@@ -1,4 +1,5 @@
 # backdown
+[![npm](https://img.shields.io/npm/dt/backdown.svg)]() [![npm](https://img.shields.io/npm/v/backdown.svg)]() [![npm](https://img.shields.io/npm/l/backdown.svg)]()
 
 Backup your global npm and yarn packages flawlessly
 

@@ -6,7 +6,7 @@
     "backdown": "index.js"
   },
   "install": "node init.js",
-  "description": "Backup globally installed npm packages",
+  "description": "Backup your global npm and yarn packages flawlessly",
   "main": "index.js",
   "repository": "https://github.com/adamsiwiec/backdown",
   "author": "Adam Siwiec",
