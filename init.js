@@ -4,7 +4,7 @@ function getUserHome() {
   return process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
 }
 
-var dir = getUserHome + '/.backdown';
+var dir = getUserHome() + '/.backdown';
 
 
 if (!fs.existsSync(dir)){
