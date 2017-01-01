@@ -1,20 +1,20 @@
 {
-    "name": "backdown",
-    "version": "0.1.0",
-    "preferGlobal": true,
-    "bin": {
-        "backdown": "index.js"
-    },
-    "scripts": {
-        "install": "node init.js"
-    },
-    "description": "Backup your global npm and yarn packages flawlessly",
-    "main": "index.js",
-    "repository": "https://github.com/adamsiwiec/backdown",
-    "author": "Adam Siwiec",
-    "license": "MIT",
-    "dependencies": {
-        "commander": "^2.9.0",
-        "node-cmd": "^1.2.0"
-    }
+  "name": "backdown",
+  "version": "0.1.1",
+  "preferGlobal": true,
+  "bin": {
+    "backdown": "index.js"
+  },
+  "scripts": {
+    "install": "node init.js"
+  },
+  "description": "Backup your global npm and yarn packages flawlessly",
+  "main": "index.js",
+  "repository": "https://github.com/adamsiwiec/backdown",
+  "author": "Adam Siwiec",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "node-cmd": "^1.2.0"
+  }
 }
