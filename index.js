@@ -4,9 +4,6 @@ const fs = require('fs');
 const cmd = require('node-cmd')
 const backdown = require('commander')
 const package = require('./package.json')
-const logUpdate = require('log-update');
-const cliSpinners = require('cli-spinners');
-const log = require('log-symbols')
 const ora = require('ora');
 
 
