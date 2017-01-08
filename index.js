@@ -4,6 +4,13 @@ const fs = require('fs');
 const cmd = require('node-cmd')
 const backdown = require('commander')
 const package = require('./package.json')
+const logUpdate = require('log-update');
+const cliSpinners = require('cli-spinners');
+const log = require('log-symbols')
+const ora = require('ora');
+
+
+
 
 backdown
     .version(package.version)
@@ -17,6 +24,12 @@ backdown
 
 
 if (process.argv.length === 2) {
+    var spinner = ora('Getting Yarn Data')
+    var spinner1 = ora('Getting npm Data')
+    var spinner2 = ora('Writing to File')
+
+console.log()
+    spinner.start();
     backup();
 }
 
@@ -27,10 +40,10 @@ function getUserHome() {
 
 function reinstall() {
 
-        cmd.get("npm --prefix " + getUserHome() + "/.backbone run main", (data) => {
-            console.log(data)
-            console.log('finished')
-        })
+    cmd.get("npm --prefix " + getUserHome() + "/.backbone run main", (data) => {
+        console.log(data)
+        console.log('finished')
+    })
 
 }
 
@@ -53,6 +66,10 @@ function getData() {
 function getNpmData() {
     return new Promise((resolve, reject) => {
         cmd.get('npm list -g --depth=0', (data) => {
+
+            spinner1.succeed();
+            spinner2.start();
+
             let array = data.split(/\r?\n/)
                 // cut extraneous lines
             let length = array.length
@@ -92,6 +109,9 @@ function getNpmData() {
 function getYarnData() {
     return new Promise((resolve, reject) => {
         cmd.get('yarn global ls', (data) => {
+
+            spinner.succeed();
+            spinner1.start();
             if (data[0] === "y") {
                 let script = ''
                 let array = data.split(/\r?\n/);
@@ -121,7 +141,14 @@ function getYarnData() {
 
 function backup() {
 
+
     getData().then((data) => {
+
+
+        spinner2.succeed();
+
+
+
 
         var array = data;
 
