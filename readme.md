@@ -22,6 +22,9 @@ $ cd ~/.backdown
 $ npm run main
 ```
 
+## Authors
+- Adam Siwiec - [Website](https://siwiec.us)
+
 ## License
 
 This project is licensed under the MIT License
